@@ -5,6 +5,7 @@ import { Home } from './pages/Home/Home';
 import { Catalog } from './pages/Catalog/Catalog';
 import { Navbar } from './components/Navbar/Navbar';
 import { StoreLogo } from './components/StoreLogo/StoreLogo';
+import { Register } from './pages/Register/Register';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
     </>
