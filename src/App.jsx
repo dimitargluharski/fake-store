@@ -6,23 +6,25 @@ import { Catalog } from './pages/Catalog/Catalog';
 import { Navbar } from './components/Navbar/Navbar';
 import { StoreLogo } from './components/StoreLogo/StoreLogo';
 import { Register } from './pages/Register/Register';
+import { Login } from './pages/Login/Login';
 
 function App() {
   return (
-    <>
-      <header className='w-full flex items-center justify-between bg-cyan-600 p-10'>
+    <div className='bg-gray-300'>
+      <header className='w-full flex items-center justify-between bg-cyan-600 p-10 '>
         <StoreLogo />
         <Navbar />
       </header>
 
-      <main>
+      <main className='absolute top-36'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </main>
-    </>
+    </div>
   );
 }
 
