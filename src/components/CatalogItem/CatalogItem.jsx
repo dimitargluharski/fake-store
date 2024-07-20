@@ -7,7 +7,7 @@ import { Price } from "../Price/Price";
 import { Title } from "../Title/Title";
 
 
-export const CatalogItem = ({ data }) => {
+export const CatalogItem = ({ data, theme }) => {
   if (!data) {
     console.log('No data provided');
     return null;
@@ -33,10 +33,9 @@ export const CatalogItem = ({ data }) => {
         </div>
       </div>
 
-
-      <div className="bg-slate-50 flex justify-between items-center">
-        <Title title={data.title} />
-        <Price price={data.price} />
+      <div className={`${theme === 'light' ? 'bg-slate-50' : 'bg-slate-900'} flex justify-between items-center`}>
+        <Title title={data.title} theme={theme} />
+        <Price price={data.price} theme={theme} />
       </div>
     </div>
   );

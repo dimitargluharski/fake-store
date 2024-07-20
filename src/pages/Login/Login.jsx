@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -45,12 +43,6 @@ export const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
-          {username === "" || password === "" && (
-            <div className="p-2">
-              <p className="text-red-500">Please fill in all fields!</p>
-            </div>
-          )}
 
           <div className="p-2">
             <button
